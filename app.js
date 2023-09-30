@@ -1,6 +1,19 @@
+
+const dotenv = require("dotenv");
+
+dotenv.config();
+
+const express = require('express');
+const logger = require('morgan');
+const cors = require('cors');
+
+const { connectDatabase } = require("./startup/datebase");
+connectDatabase();
+
 const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
+
 
 const contactsRouter = require("./routes/api/contacts");
 
